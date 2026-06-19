@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet CFA Cours — DIALLO Mamadou</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav-bar">
+    <a href="index.html#hero" class="nav-logo"><span class="prompt">~/</span>mad.dev</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">intro</a></li>
+      <li><a href="index.html#bts">bts-sio</a></li>
+      <li><a href="index.html#competences">compétences</a></li>
+      <li><a href="index.html#entreprise">entreprise</a></li>
+      <li><a href="index.html#projets" class="active">projets</a></li>
+      <li><a href="index.html#veille">veille</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="cv.pdf" target="_blank" class="nav-cv">↓ CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-shell">
+    <section class="section">
+      <p class="section-label">projet école</p>
+      <h1 class="section-title">Portail "CFA Cours"</h1>
+      <div class="section-divider"></div>
+
+      <div class="project-top">
+        <div class="project-lead">
+          <p>Projet de première année visant à créer un portail de promotion pour le CFA. Le site permet aux élèves de retrouver des informations sur l'école, les cours par matière, et d'autres ressources pédagogiques.</p>
+        </div>
+        <div class="project-note">
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Contexte</h4>
+          <p>L'objectif était de centraliser les informations pour les étudiants du CFA. Le site devait être simple, informatif et facile à naviguer pour présenter l'école et les ressources de cours.</p>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Technologies & Outils</h4>
+          <ul class="project-list">
+            <li>HTML5 pour la structure.</li>
+            <li>CSS3 pour le style.</li>
+            <li>Bootstrap 5 pour la mise en page responsive.</li>
+            <li>Structure de fichiers modulaire pour l'organisation.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Période & Groupe</h4>
+          <p>Projet réalisé en autonomie sur une période de 3 semaines en première année de BTS.</p>
+        </div>
+      </div>
+
+      <div class="project-panel" style="margin-bottom: 2rem;">
+        <h4 class="ent-card-title">Illustration</h4>
+        <p style="margin-bottom: 1.5rem;">Aperçu de la page d'accueil du portail.</p>
+        <div class="project-gallery">
+          <div class="project-shot" style="background-image: url('https://via.placeholder.com/800x400/10b981/ffffff?text=CFA+Cours');"></div>
+          <div class="project-shot"></div>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <h4 class="ent-card-title">Conclusion & Apprentissages</h4>
+        <p>Ce projet m'a montré l'importance de bien structurer l'information pour un portail web. J'ai développé des compétences en organisation de contenu et en création d'une interface utilisateur efficace pour centraliser des ressources éducatives.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="index.html#projets" class="btn-ghost"><i class="bi bi-arrow-left"></i> Retour aux projets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

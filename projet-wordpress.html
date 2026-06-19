@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet E-enseignant (WordPress) — DIALLO Mamadou</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav-bar">
+    <a href="index.html#hero" class="nav-logo"><span class="prompt">~/</span>mad.dev</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">intro</a></li>
+      <li><a href="index.html#bts">bts-sio</a></li>
+      <li><a href="index.html#competences">compétences</a></li>
+      <li><a href="index.html#entreprise">entreprise</a></li>
+      <li><a href="index.html#projets" class="active">projets</a></li>
+      <li><a href="index.html#veille">veille</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="cv.pdf" target="_blank" class="nav-cv">↓ CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-shell">
+    <section class="section">
+      <p class="section-label">projet école</p>
+      <h1 class="section-title">E-enseignant (WordPress)</h1>
+      <div class="section-divider"></div>
+
+      <div class="project-top">
+        <div class="project-lead">
+          <p>Création du site WordPress du CFA Cours, avec une fonctionnalité unique : un mini-jeu de Blackjack, codé en C, a été compilé et intégré dans le CMS. Le jeu propose 5 villes différentes avec des variations de gameplay.</p>
+        </div>
+        <div class="project-note">
+          <div class="tags">
+            <span class="tag">WordPress</span><span class="tag">C</span><span class="tag accent">PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Contexte</h4>
+          <p>Le défi de ce projet était double : d'une part, mettre en place un site de gestion de contenu complet avec WordPress, et d'autre part, explorer l'intégration d'un programme externe compilé (en C) au sein d'un environnement web (PHP).</p>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Technologies & Outils</h4>
+          <ul class="project-list">
+            <li>WordPress 6+ pour le CMS.</li>
+            <li>Langage C pour la logique du jeu de Blackjack.</li>
+            <li>PHP pour l'intégration (via `exec()` ou `shell_exec()`).</li>
+            <li>GCC pour la compilation du code C sur le serveur.</li>
+            <li>Création d'un thème personnalisé WordPress.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Période & Groupe</h4>
+          <p>Projet réalisé en autonomie en première année de BTS.</p>
+        </div>
+      </div>
+
+      <div class="project-panel" style="margin-bottom: 2rem;">
+        <h4 class="ent-card-title">Illustration</h4>
+        <div class="project-gallery">
+          <div class="project-shot" style="background-image: url('https://via.placeholder.com/800x400/8b5cf6/ffffff?text=E-enseignant+WordPress');"></div>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <h4 class="ent-card-title">Conclusion & Apprentissages</h4>
+        <p>Ce projet atypique m'a montré comment il est possible de faire communiquer des technologies très différentes. J'ai développé des compétences en intégration cross-platform et en gestion de contenu interactif, tout en résolvant les défis liés à la sécurité et aux permissions d'exécution sur un serveur web.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="index.html#projets" class="btn-ghost"><i class="bi bi-arrow-left"></i> Retour aux projets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

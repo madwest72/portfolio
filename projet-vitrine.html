@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Site Vitrine — DIALLO Mamadou</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- GLOW BG -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav class="nav-bar">
+    <a href="index.html#hero" class="nav-logo">
+      <span class="prompt">~/</span>mad.dev
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">intro</a></li>
+      <li><a href="index.html#bts">bts-sio</a></li>
+      <li><a href="index.html#entreprise">entreprise</a></li>
+      <li><a href="index.html#projets" class="active">projets</a></li>
+      <li><a href="index.html#veille">veille</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="cv.pdf" target="_blank" class="nav-cv">↓ CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-shell">
+
+    <!-- PROJET -->
+    <section class="section">
+      <p class="section-label">projet école</p>
+      <h1 class="section-title">Site Vitrine "Gridiron"</h1>
+      <div class="section-divider"></div>
+
+      <div class="project-top">
+        <div class="project-lead">
+          <p>
+            Projet réalisé en première année de BTS SIO, consistant à créer une landing page responsive pour une boutique fictive de maillots et accessoires de football américain. L'objectif était de mettre en pratique les bases du développement web front-end.
+          </p>
+        </div>
+        <div class="project-note">
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag blue">Responsive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Contexte</h4>
+          <p>
+            Ce projet s'inscrivait dans le module de développement web. Il fallait concevoir une page d'accueil statique mais attrayante, en utilisant le framework Bootstrap pour assurer la responsivité sur différents formats d'écrans (mobile, tablette, desktop).
+          </p>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Technologies</h4>
+          <ul class="project-list">
+            <li>HTML5 pour la structure sémantique.</li>
+            <li>CSS3 pour le style personnalisé et les animations.</li>
+            <li>Bootstrap 5 pour le système de grille et les composants.</li>
+            <li>JavaScript (très léger) pour des interactions simples.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Période & Groupe</h4>
+          <p>
+            Réalisé sur une période de 2 semaines en Octobre 2024. Ce projet a été mené en autonomie, permettant de maîtriser chaque étape du processus de création.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-panel" style="margin-bottom: 2rem;">
+        <h4 class="ent-card-title">Galerie d'images</h4>
+        <p style="margin-bottom: 1.5rem;">Voici quelques captures d'écran du projet, montrant la version desktop et mobile.</p>
+        <div class="project-gallery">
+          <div class="project-shot">
+            <!-- Vous pouvez mettre une balise <img> ici -->
+            <!-- ex: <img src="path/to/image1.jpg" alt="Aperçu 1"> -->
+          </div>
+          <div class="project-shot">
+            <!-- ex: <img src="path/to/image2.jpg" alt="Aperçu 2"> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <h4 class="ent-card-title">Conclusion & Apprentissages</h4>
+        <p>
+          Ce projet a été une excellente introduction à la conception de sites web modernes. Il m'a permis de consolider mes compétences en HTML/CSS et de découvrir la puissance de Bootstrap pour créer des designs responsives rapidement. La principale difficulté a été d'assurer une compatibilité visuelle parfaite sur tous les navigateurs, un défi qui m'a beaucoup appris sur le débogage CSS.
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="index.html#projets" class="btn-ghost">
+          <i class="bi bi-arrow-left"></i> Retour aux projets
+        </a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

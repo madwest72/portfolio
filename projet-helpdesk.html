@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Helpdesk GLPI + n8n — DIALLO Mamadou</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav-bar">
+    <a href="index.html#hero" class="nav-logo"><span class="prompt">~/</span>mad.dev</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">intro</a></li>
+      <li><a href="index.html#bts">bts-sio</a></li>
+      <li><a href="index.html#competences">compétences</a></li>
+      <li><a href="index.html#entreprise">entreprise</a></li>
+      <li><a href="index.html#projets" class="active">projets</a></li>
+      <li><a href="index.html#veille">veille</a></li>
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="cv.pdf" target="_blank" class="nav-cv">↓ CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-shell">
+    <section class="section">
+      <p class="section-label">projet personnel</p>
+      <h1 class="section-title">Helpdesk GLPI + n8n</h1>
+      <div class="section-divider"></div>
+
+      <div class="project-top">
+        <div class="project-lead">
+          <p>Projet personnel de mise en place d'un système de helpdesk complet. Il utilise GLPI pour la gestion des tickets et n8n pour automatiser leur création et leur routage à partir d'une boîte mail. L'ensemble est déployé via Docker.</p>
+        </div>
+        <div class="project-note">
+          <div class="tags">
+            <span class="tag blue">Docker</span><span class="tag blue">GLPI</span><span class="tag accent">n8n</span><span class="tag">Gmail API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Contexte</h4>
+          <p>L'idée de ce projet était de simuler un environnement de support IT en utilisant des outils open-source professionnels. Je voulais automatiser le flux de création de tickets pour le rendre plus efficace, comme en entreprise.</p>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Technologies & Outils</h4>
+          <ul class="project-list">
+            <li>Docker et Docker Compose pour l'orchestration.</li>
+            <li>GLPI pour le système de ticketing (ITSM).</li>
+            <li>n8n pour l'automatisation des workflows.</li>
+            <li>API Gmail pour déclencher les workflows à la réception d'un email.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Période & Groupe</h4>
+          <p>Projet personnel réalisé en autonomie, en cours d'amélioration continue.</p>
+        </div>
+      </div>
+
+      <div class="project-panel" style="margin-bottom: 2rem;">
+        <h4 class="ent-card-title">Illustration</h4>
+        <div class="project-gallery">
+          <div class="project-shot">Schéma d'architecture...</div>
+          <div class="project-shot">Workflow n8n...</div>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <h4 class="ent-card-title">Conclusion & Apprentissages</h4>
+        <p>Ce projet me permet d'explorer l'interconnexion de services professionnels (GLPI, messagerie) et de maîtriser leur déploiement conteneurisé avec Docker. C'est un excellent bac à sable pour tester des configurations DevOps.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="index.html#projets" class="btn-ghost"><i class="bi bi-arrow-left"></i> Retour aux projets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIALLO Mamadou — Portfolio BTS SIO SLAM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- GLOW BG -->
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAV -->
+  <nav class="nav-bar">
+    <a href="#hero" class="nav-logo">
+      <span class="prompt">~/</span>mad.dev
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">intro</a></li>
+      <li><a href="#bts">bts-sio</a></li>
+      <li><a href="#competences">compétences</a></li>
+      <li><a href="#entreprise">entreprise</a></li>
+      <li><a href="#projets">projets</a></li>
+      <li><a href="#veille">veille</a></li>
+      <li><a href="#contact">contact</a></li>
+      <li><a href="cv.pdf" target="_blank" class="nav-cv">↓ CV</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <div id="hero">
+      <div class="hero-photo-section">
+        <div class="hero-photo-card">
+          <div class="hero-photo-frame">
+            <i class="bi bi-person-badge"></i>
+            <span>Photo</span>
+          </div>
+          <div class="hero-photo-text">
+            <h2>DIALLO Mamadou</h2>
+            <p>BTS SIO SLAM • Développement web • Paris</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="hero-eyebrow">Étudiant BTS SIO — Option SLAM</p>
+          <p class="hero-ribbon">
+            <span>PHP</span>
+            <span>SQL</span>
+            <span>Bootstrap</span>
+            <span>JS</span>
+          </p>
+          <h1 class="hero-name">
+            <span class="dim">Mamadou</span><br>
+            <span class="accent">DIALLO</span>
+          </h1>
+          <p class="hero-desc">
+            Passionné par le développement web et les architectures logicielles.
+            En formation à <strong>CFA INSTA Paris</strong>, je conçois des applications full-stack
+            et explore l'univers DevOps/Cloud.
+          </p>
+          <p class="hero-typing">Je crée <span id="typedSkill" class="typed-skill"></span></p>
+          <div class="hero-actions">
+            <a href="cv.pdf" target="_blank" class="btn-primary">
+              <i class="bi bi-file-earmark-arrow-down"></i> Télécharger le CV
+            </a>
+            <a href="#projets" class="btn-ghost">
+              <i class="bi bi-code-slash"></i> Voir mes projets
+            </a>
+          </div>
+        </div>
+
+        <!-- TERMINAL CARD -->
+        <div class="terminal-card">
+          <div class="terminal-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">mamadou@portfolio:~</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="t-prompt">$ </span><span class="t-accent">whoami</span></div>
+            <div class="t-muted">DIALLO Mamadou</div>
+            <br>
+            <div><span class="t-prompt">$ </span><span class="t-accent">cat</span> <span class="t-blue">skills.json</span></div>
+            <div><span class="t-muted">{</span></div>
+            <div>&nbsp;&nbsp;<span class="t-purple">"lang"</span><span class="t-muted">:</span> <span class="t-string">["PHP", "C", "SQL"]</span><span class="t-muted">,</span></div>
+            <div>&nbsp;&nbsp;<span class="t-purple">"web"</span><span class="t-muted">:</span> <span class="t-string">["HTML", "CSS", "Bootstrap"]</span><span class="t-muted">,</span></div>
+            <div>&nbsp;&nbsp;<span class="t-purple">"tools"</span><span class="t-muted">:</span> <span class="t-string">["Docker", "Git", "n8n"]</span><span class="t-muted">,</span></div>
+            <div>&nbsp;&nbsp;<span class="t-purple">"infra"</span><span class="t-muted">:</span> <span class="t-string">["LAMP", "GLPI", "Linux"]</span></div>
+            <div><span class="t-muted">}</span></div>
+            <br>
+            <div><span class="t-prompt">$ </span><span class="t-accent">echo</span> <span class="t-string">"Open to alternance 2026"</span></div>
+            <div class="t-accent">Open to alternance 2026<span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BTS SIO -->
+    <section id="bts" class="section reveal">
+      <p class="section-label">formation</p>
+      <h2 class="section-title">Le BTS SIO</h2>
+      <div class="section-divider"></div>
+
+      <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; max-width: 640px; margin-bottom: 2.5rem;">
+        Le <strong style="color:var(--text);">Brevet de Technicien Supérieur Services Informatiques aux Organisations</strong>
+        forme aux métiers de l'informatique en deux ans. Il propose deux spécialisations complémentaires.
+      </p>
+
+      <div class="bts-grid">
+        <div class="bts-card active-option">
+          <div class="bts-icon">💻</div>
+          <h3>Option SLAM</h3>
+          <p>Solutions Logicielles et Applications Métiers — spécialisation dans la conception,
+          le développement et la maintenance de logiciels, d'applications web et mobiles.</p>
+          <div class="tags">
+            <span class="tag accent">PHP</span>
+            <span class="tag accent">SQL</span>
+            <span class="tag accent">POO</span>
+            <span class="tag accent">MVC</span>
+            <span class="tag blue">API REST</span>
+            <span class="tag blue">Docker</span>
+          </div>
+          <h4 class="bts-debouches-title">Débouchés possibles</h4>
+          <ul class="bts-debouches">
+            <li>Développeur web / mobile</li>
+            <li>Analyste programmeur</li>
+            <li>Responsable des services applicatifs</li>
+          </ul>
+        </div>
+        <div class="bts-card">
+          <div class="bts-icon">🌐</div>
+          <h3>Option SISR</h3>
+          <p>Solutions d'Infrastructure, Systèmes et Réseaux — spécialisation dans la mise en place
+          et la gestion de l'infrastructure informatique d'une organisation.</p>
+          <div class="tags">
+            <span class="tag">Réseaux</span>
+            <span class="tag">Sécurité</span>
+            <span class="tag">Linux</span>
+            <span class="tag">GLPI</span>
+            <span class="tag">Virtualisation</span>
+          </div>
+          <h4 class="bts-debouches-title">Débouchés possibles</h4>
+          <ul class="bts-debouches">
+            <li>Technicien systèmes et réseaux</li>
+            <li>Administrateur infrastructure</li>
+            <li>Technicien support et sécurité</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="section reveal">
+      <p class="section-label">savoir-faire</p>
+      <h2 class="section-title">Mes Compétences</h2>
+      <div class="section-divider"></div>
+
+      <div class="skills-grid">
+        <!-- Langages -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Langages &amp; BDD</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">PHP</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">SQL</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-percent">50%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">C</span><span class="skill-percent">25%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 25%;"></div></div>
+          </div>
+          <div class="skill-item">
+           <div class="skill-header"><span class="skill-name">Java</span><span class="skill-percent">40%</span></div>
+           <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+         </div>
+         <div class="skill-item">
+           <div class="skill-header"><span class="skill-name">Python</span><span class="skill-percent">40%</span></div>
+           <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+         </div>
+        </div>
+
+        <!-- Web & Frameworks -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Web &amp; Frameworks</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">HTML5</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">CSS3</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Bootstrap</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Architecture MVC</span><span class="skill-percent">75%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+          </div>
+        </div>
+
+        <!-- Outils & Infra -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Outils &amp; Infra</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Docker</span><span class="skill-percent">50%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Git &amp; GitHub</span><span class="skill-percent">50%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">GLPI</span><span class="skill-percent">50%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">n8n (Automatisation)</span><span class="skill-percent">50%</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTREPRISE -->
+    <section id="entreprise" class="section reveal">
+      <p class="section-label">expérience</p>
+      <h2 class="section-title">Stage chez MetierBois</h2>
+      <div class="section-divider"></div>
+
+      <div class="ent-grid">
+        <div class="ent-card">
+          <div class="ent-icon"><i class="bi bi-building"></i></div>
+          <h4>Contexte</h4>
+          <p>Stage au sein de <strong>MetierBois</strong>, une entreprise de menuiserie. Ma mission était d'apporter des solutions numériques pour optimiser les processus internes, notamment via l'automatisation de tâches répétitives.</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-icon"><i class="bi bi-gear-wide-connected"></i></div>
+          <h4>Outils &amp; Techno</h4>
+          <p>Mise en place d'un environnement d'automatisation basé sur des outils open-source pour répondre aux besoins spécifiques de l'entreprise (n8n, API, etc.).</p>
+        </div>
+        <div class="ent-card">
+          <div class="ent-icon"><i class="bi bi-check2-all"></i></div>
+          <h4>Mes Tâches</h4>
+          <ul>
+            <li>Analyse des besoins métier</li>
+            <li>Conception de workflows d'automatisation</li>
+            <li>Intégration d'API (WhatsApp, Notion)</li>
+            <li>Automatisation de workflows (n8n, IA)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="section reveal">
+      <p class="section-label">réalisations</p>
+      <h2 class="section-title">Mes Projets</h2>
+      <div class="section-divider"></div>
+
+      <div class="project-intro">
+        <p>
+          Chaque projet est présenté avec son contexte, sa stack et le rôle joué, pour que la lecture soit plus claire.
+        </p>
+        <div class="project-stats">
+          <div class="project-stat"><strong>7+</strong><span>projets école</span></div>
+          <div class="project-stat"><strong>1</strong><span>projet entreprise</span></div>
+          <div class="project-stat"><strong>2</strong><span>projets perso</span></div>
+        </div>
+      </div>
+
+      <p class="project-kicker">Clique sur une carte pour ouvrir la fiche projet détaillée.</p>
+
+      <div class="proj-tabs" role="tablist">
+        <button class="proj-tab active" data-tab="annee1" role="tab">1ère Année</button>
+        <button class="proj-tab" data-tab="annee2" role="tab">2ème Année</button>
+        <button class="proj-tab" data-tab="entreprise" role="tab">Entreprise</button>
+        <button class="proj-tab" data-tab="perso" role="tab">Personnel</button>
+      </div>
+
+      <!-- TAB 1ère ANNÉE -->
+      <div class="proj-pane active" id="tab-annee1">
+        <div class="proj-grid">
+
+          <a href="projet-vitrine.html" class="proj-card featured">
+            <div class="proj-card-badge">Projet phare</div>
+            <div class="proj-card-top">
+              <h3>Site Vitrine</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Site vitrine en HTML/CSS/Bootstrap pour une boutique de maillots et accessoires de football américain.</p>
+            <div class="proj-card-meta">
+              <span>Landing page</span>
+              <span>Responsive</span>
+            </div>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span></div>
+          </a>
+
+          <a href="projet-cfa-cours.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>CFA Cours</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Site qui regroupe les élèves de la promo avec les cours par matière et la présentation de l'école.</p>
+            <div class="proj-card-meta">
+              <span>Portail de promo</span>
+            </div>
+            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Bootstrap</span></div>
+          </a>
+
+          <a href="projet-lamp.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Serveur LAMP / GLPI</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Installation d'une VM Linux Debian avec GLPI, MariaDB et PHP pour la gestion de parc informatique.</p>
+            <div class="proj-card-meta">
+              <span>Administration système</span>
+            </div>
+            <div class="tags"><span class="tag blue">Linux</span><span class="tag blue">GLPI</span><span class="tag">MariaDB</span><span class="tag">PHP</span></div>
+          </a>
+
+          <a href="projet-wordpress.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>E-enseignant (WordPress)</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Site WordPress du CFA cours. Inclut un jeu Blackjack codé en C avec 5 villes intégrées.</p>
+            <div class="proj-card-meta">
+              <span>CMS</span>
+              <span>Mini-jeu C</span>
+            </div>
+            <div class="tags"><span class="tag">WordPress</span><span class="tag">C</span></div>
+          </a>
+
+          <a href="projet-finance.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Gestion Finance</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Application web permettant de gérer ses finances personnelles avec base de données et suivi CRUD.</p>
+            <div class="proj-card-meta">
+              <span>CRUD</span>
+              <span>Back-office</span>
+            </div>
+            <div class="tags"><span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag">HTML</span><span class="tag">CSS</span></div>
+          </a>
+
+          <a href="projet-sport.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Projet Sport</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Application CRUD / MVC pour un club de sport avec inscription, connexion et espace membre.</p>
+            <div class="proj-card-meta">
+              <span>Authentification</span>
+              <span>Gestion membre</span>
+            </div>
+            <div class="tags"><span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag">MVC</span><span class="tag">Bootstrap</span></div>
+          </a>
+
+          <a href="projet-dumbfit.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>DumbFit</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Plateforme de suivi de santé qui permet de monitorer les objectifs de bien-être avec une logique de tranches de performance.</p>
+            <div class="proj-card-meta">
+              <span>Santé</span>
+              <span>CRUD</span>
+            </div>
+            <div class="tags"><span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag">JS</span><span class="tag">MVC</span><span class="tag">Bootstrap</span></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- TAB 2ème ANNÉE -->
+      <div class="proj-pane" id="tab-annee2">
+        <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.9rem;">
+          Les projets de deuxième année seront ajoutés prochainement.
+        </p>
+      </div>
+
+      <!-- TAB ENTREPRISE -->
+      <div class="proj-pane" id="tab-entreprise">
+        <div class="proj-grid">
+
+          <a href="projet-workflow.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Automatisation (Stage MetierBois)</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Conception de workflows avec n8n et IA pour automatiser la qualification de leads et l'intégration de services (WhatsApp, Notion) durant mon stage.</p>
+            <div class="proj-card-meta">
+              <span>Automatisation</span>
+              <span>IA</span>
+            </div>
+            <div class="tags"><span class="tag accent">n8n</span><span class="tag purple">IA</span><span class="tag blue">API</span><span class="tag">WhatsApp</span></div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- TAB PERSO -->
+      <div class="proj-pane" id="tab-perso">
+        <div class="proj-grid">
+          <a href="projet-letterbook.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Letterbook</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Application CRUD style Letterboxd pour les livres, avec intégration de l'API Google Books, carousels par genre et fil d'activité.</p>
+            <div class="proj-card-meta">
+              <span>Bibliothèque</span>
+              <span>API</span>
+            </div>
+            <div class="tags"><span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag blue">Google API</span><span class="tag">Bootstrap</span></div>
+          </a>
+
+          <a href="projet-helpdesk.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Helpdesk GLPI + n8n</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Projet perso de helpdesk avec GLPI et n8n sur Docker pour automatiser la création et l’orientation des tickets.</p>
+            <div class="proj-card-meta">
+              <span>Support</span>
+              <span>Automatisation</span>
+            </div>
+            <div class="tags"><span class="tag blue">Docker</span><span class="tag blue">GLPI</span><span class="tag accent">n8n</span><span class="tag">Gmail API</span></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VEILLE TECHNO -->
+    <section id="veille" class="section reveal">
+      <p class="section-label">veille technologique</p>
+      <h2 class="section-title">Veille Techno</h2>
+      <div class="section-divider"></div>
+
+      <div class="veille-content">
+        <div class="veille-article">
+          <span class="veille-num">01</span>
+          <div>
+            <h4>Kubernetes : Le support du Swap en version stable</h4>
+            <p>Avec la sortie de Kubernetes 1.30, le support de la mémoire Swap sur les nœuds Linux est enfin passé en version stable. Cette avancée permet de mieux gérer les applications gourmandes en mémoire et d'améliorer la résilience des nœuds, un sujet que je suis de près pour l'optimisation des infrastructures Cloud.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <p class="section-label">contact</p>
+      <h2 class="section-title">Me Contacter</h2>
+      <div class="section-divider"></div>
+
+      <div class="contact-box">
+        <div class="contact-panel">
+          <p style="color:var(--text-muted); font-size:0.93rem; line-height:1.7; margin-bottom:1.5rem;">
+            Disponible pour une <strong style="color:var(--text);">alternance à partir de septembre 2026</strong>.
+            N'hésitez pas à me contacter pour discuter d'un projet ou d'une opportunité.
+          </p>
+          <div class="tags" style="margin-top:1rem;">
+            <span class="tag accent">Disponible</span>
+            <span class="tag blue">Paris / Île-de-France</span>
+            <span class="tag">Alternance 2026</span>
+          </div>
+
+          <form class="contact-form" action="mailto:mamadou.abdiallo@outlook.fr" method="post" enctype="text/plain">
+            <div class="form-row">
+              <label class="form-group">
+                <span>Nom</span>
+                <input type="text" name="nom" placeholder="Votre nom" required>
+              </label>
+              <label class="form-group">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Votre email" required>
+              </label>
+            </div>
+            <label class="form-group">
+              <span>Sujet</span>
+              <input type="text" name="sujet" placeholder="Objet du message" required>
+            </label>
+            <label class="form-group">
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+            </label>
+            <button type="submit" class="btn-primary">
+              <i class="bi bi-send"></i> Envoyer le message
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/mamadou-diallo-2627a1377/" target="_blank" class="contact-link">
+            <div class="contact-link-icon"><i class="bi bi-linkedin" style="color:var(--blue)"></i></div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">DIALLO Mamadou</span>
+            </div>
+          </a>
+          <a href="https://github.com/madwest72" target="_blank" class="contact-link">
+            <div class="contact-link-icon"><i class="bi bi-github"></i></div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">madwest72</span>
+            </div>
+          </a>
+          <a href="mailto:mamadou.abdiallo@outlook.fr" class="contact-link">
+            <div class="contact-link-icon"><i class="bi bi-envelope-fill" style="color:var(--accent)"></i></div>
+            <div class="contact-link-info">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">mamadou.abdiallo@outlook.fr</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
