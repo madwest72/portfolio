@@ -1,26 +1,29 @@
-const toggle = document.getElementById('navToggle');
-const links = document.getElementById('navLinks');
+const toggle = document.getElementById("navToggle");
+const links = document.getElementById("navLinks");
 
 if (toggle && links) {
-  toggle.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => links.classList.remove('open'));
+  toggle.addEventListener("click", () => links.classList.toggle("open"));
+  links.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => links.classList.remove("open"));
   });
 }
 
-const sections = document.querySelectorAll('main section[id], #hero');
-const navLinks = document.querySelectorAll('.nav-links a');
-const progress = document.getElementById('scrollProgress');
+const sections = document.querySelectorAll("main section[id], #hero");
+const navLinks = document.querySelectorAll(".nav-links a");
+const progress = document.getElementById("scrollProgress");
 
 function updateNav() {
   if (!sections.length) return;
-  let current = '';
-  sections.forEach(section => {
+  let current = "";
+  sections.forEach((section) => {
     if (window.scrollY >= section.offsetTop - 130) current = section.id;
   });
-  navLinks.forEach(a => {
-    const href = a.getAttribute('href') || '';
-    a.classList.toggle('active', href === '#' + current || href.endsWith('.html#' + current));
+  navLinks.forEach((a) => {
+    const href = a.getAttribute("href") || "";
+    a.classList.toggle(
+      "active",
+      href === "#" + current || href.endsWith(".html#" + current),
+    );
   });
 }
 
@@ -28,44 +31,59 @@ function updateProgress() {
   if (!progress) return;
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const value = max > 0 ? (window.scrollY / max) * 100 : 0;
-  progress.style.width = value + '%';
+  progress.style.width = value + "%";
 }
 
-window.addEventListener('scroll', () => {
-  updateNav();
-  updateProgress();
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    updateNav();
+    updateProgress();
+  },
+  { passive: true },
+);
 updateNav();
 updateProgress();
 
-const reveals = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window && reveals.length) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(reveal => observer.observe(reveal));
+const reveals = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && reveals.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08 },
+  );
+  reveals.forEach((reveal) => observer.observe(reveal));
 } else {
-  reveals.forEach(reveal => reveal.classList.add('visible'));
+  reveals.forEach((reveal) => reveal.classList.add("visible"));
 }
 
-document.querySelectorAll('.proj-tab').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.proj-tab').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.proj-pane').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    const target = document.getElementById('tab-' + btn.dataset.tab);
-    if (target) target.classList.add('active');
+document.querySelectorAll(".proj-tab").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document
+      .querySelectorAll(".proj-tab")
+      .forEach((b) => b.classList.remove("active"));
+    document
+      .querySelectorAll(".proj-pane")
+      .forEach((p) => p.classList.remove("active"));
+    btn.classList.add("active");
+    const target = document.getElementById("tab-" + btn.dataset.tab);
+    if (target) target.classList.add("active");
   });
 });
 
-const typedSkill = document.getElementById('typedSkill');
+const typedSkill = document.getElementById("typedSkill");
 if (typedSkill) {
-  const phrases = ['des interfaces propres', 'des applis PHP / SQL', 'des outils utiles'];
+  const phrases = [
+    "des interfaces propres",
+    "des applis PHP / SQL",
+    "des outils utiles",
+  ];
   let index = 0;
   let char = 0;
   let deleting = false;
@@ -94,16 +112,74 @@ if (typedSkill) {
   tick();
 }
 
-document.querySelectorAll('.proj-card').forEach(card => {
-  card.addEventListener('mousemove', event => {
+document.querySelectorAll(".proj-card").forEach((card) => {
+  card.addEventListener("mousemove", (event) => {
     const rect = card.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
-    const rotateX = ((y / rect.height) - 0.5) * -5;
-    const rotateY = ((x / rect.width) - 0.5) * 6;
+    const rotateX = (y / rect.height - 0.5) * -5;
+    const rotateY = (x / rect.width - 0.5) * 6;
     card.style.transform = `translateY(-3px) perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
   });
 });
+
+const galleryShots = document.querySelectorAll(
+  ".project-gallery .project-shot[href]",
+);
+
+if (galleryShots.length) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "image-lightbox";
+  lightbox.setAttribute("role", "dialog");
+  lightbox.setAttribute("aria-modal", "true");
+  lightbox.setAttribute("aria-hidden", "true");
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "lightbox-close";
+  closeBtn.type = "button";
+  closeBtn.setAttribute("aria-label", "Fermer l'image");
+  closeBtn.textContent = "×";
+
+  const lightboxImg = document.createElement("img");
+  lightboxImg.alt = "Illustration du projet";
+
+  lightbox.appendChild(closeBtn);
+  lightbox.appendChild(lightboxImg);
+  document.body.appendChild(lightbox);
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  };
+
+  const openLightbox = (src) => {
+    lightboxImg.src = src;
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  galleryShots.forEach((shot) => {
+    shot.addEventListener("click", (event) => {
+      event.preventDefault();
+      const src = shot.getAttribute("href");
+      if (!src) return;
+      openLightbox(src);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && lightbox.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
+}

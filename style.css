@@ -713,27 +713,6 @@ main { padding-top: 60px; }
   box-shadow: 0 18px 40px rgba(0,0,0,0.22);
 }
 
-.proj-card.featured {
-  grid-row: span 2;
-  background: linear-gradient(180deg, rgba(182,140,247,0.12), rgba(193,134,90,0.08));
-  border-color: rgba(182,140,247,0.3);
-}
-
-.proj-card.featured .proj-card-top h3 {
-  font-size: 1.15rem;
-}
-
-.proj-card-badge {
-  width: fit-content;
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  border: 1px solid var(--brown-border);
-  background: var(--brown-dim);
-  color: #efd2b5;
-  font-family: var(--mono);
-  font-size: 0.65rem;
-}
-
 .proj-card-top {
   display: flex;
   align-items: flex-start;
@@ -1008,6 +987,7 @@ footer {
 
 .project-shot {
   min-height: 120px;
+  aspect-ratio: 16 / 9;
   border-radius: 16px;
   border: 1px solid var(--card-border);
   background:
@@ -1016,6 +996,59 @@ footer {
   background-size: cover;
   background-position: center;
   display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-family: var(--mono); font-size: 0.8rem;
+  cursor: zoom-in;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 16, 0.88);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.image-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-lightbox img {
+  max-width: min(92vw, 1400px);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 18px 65px rgba(0, 0, 0, 0.45);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
@@ -1026,7 +1059,6 @@ footer {
   .contact-box { grid-template-columns: 1fr; }
   .project-top, .project-detail-grid { grid-template-columns: 1fr; }
   .project-intro { flex-direction: column; align-items: start; }
-  .proj-card.featured { grid-row: auto; }
 }
 
 @media (max-width: 600px) {
