@@ -28,7 +28,7 @@
       <li><a href="#competences">compétences</a></li>
       <li><a href="#entreprise">entreprise</a></li>
       <li><a href="#projets">projets</a></li>
-      <li><a href="#veille">veille</a></li>
+      
       <li><a href="#contact">contact</a></li>
       <li><a href="cv-mamadou-diallo.pdf" download="CV-Mamadou-DIALLO.pdf" class="nav-cv">&darr; CV</a></li>
     </ul>
@@ -238,6 +238,19 @@
             <div class="skill-bar"><div class="skill-level" style="width: 50%;"></div></div>
           </div>
         </div>
+
+        <!-- Langues -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Langues</h3>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Français</span><span class="skill-percent">Natif</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 100%;"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header"><span class="skill-name">Anglais</span><span class="skill-percent">A2/B1</span></div>
+            <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -282,7 +295,7 @@
           Chaque projet est présenté avec son contexte, sa stack et le rôle joué, pour que la lecture soit plus claire.
         </p>
         <div class="project-stats">
-          <div class="project-stat"><strong>7+</strong><span>projets école</span></div>
+          <div class="project-stat"><strong>8+</strong><span>projets école</span></div>
           <div class="project-stat"><strong>1</strong><span>projet entreprise</span></div>
           <div class="project-stat"><strong>2</strong><span>projets perso</span></div>
         </div>
@@ -394,9 +407,22 @@
 
       <!-- TAB 2ème ANNÉE -->
       <div class="proj-pane" id="tab-annee2">
-        <p style="text-align: center; color: var(--text-muted); margin-top: 2rem; font-size: 0.9rem;">
-          Les projets de deuxième année seront ajoutés prochainement.
-        </p>
+        <div class="proj-grid">
+
+          <a href="projet-creche.html" class="proj-card">
+            <div class="proj-card-top">
+              <h3>Gestion de Crèche</h3>
+              <span class="proj-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </div>
+            <p>Site de crèche où les parents inscrivent leurs enfants et où les animateurs créent leur compte et indiquent leur disponibilité. Projet de cours en cours de développement.</p>
+            <div class="proj-card-meta">
+              <span>Inscriptions</span>
+              <span>Gestion des rôles</span>
+            </div>
+            <div class="tags"><span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag">MVC</span><span class="tag">daisyUI</span></div>
+          </a>
+
+        </div>
       </div>
 
       <!-- TAB ENTREPRISE -->
@@ -452,7 +478,8 @@
       </div>
     </section>
 
-    <!-- VEILLE TECHNO -->
+    <!-- VEILLE TECHNO — masquée tant que le contenu n'est pas prêt.
+         Retirer ce commentaire (et remettre le lien nav #veille) une fois rempli.
     <section id="veille" class="section reveal">
       <p class="section-label">veille technologique</p>
       <h2 class="section-title">Veille Techno</h2>
@@ -468,6 +495,8 @@
         </div>
       </div>
     </section>
+    -->
+
 
     <!-- CONTACT -->
     <section id="contact" class="section reveal">

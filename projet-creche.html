@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet Gestion de Crèche — DIALLO Mamadou</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <nav class="nav-bar">
+    <a href="index.html#hero" class="nav-logo"><span class="prompt">~/</span>mad.dev</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#hero">intro</a></li>
+      <li><a href="index.html#bts">bts-sio</a></li>
+      <li><a href="index.html#competences">compétences</a></li>
+      <li><a href="index.html#entreprise">entreprise</a></li>
+      <li><a href="index.html#projets" class="active">projets</a></li>
+      
+      <li><a href="index.html#contact">contact</a></li>
+      <li><a href="cv-mamadou-diallo.pdf" download="CV-Mamadou-DIALLO.pdf" class="nav-cv">&darr; CV</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-shell">
+    <section class="section">
+      <p class="section-label">projet école</p>
+      <h1 class="section-title">Gestion de Crèche</h1>
+      <div class="section-divider"></div>
+
+      <div class="project-top">
+        <div class="project-lead">
+          <p>Projet de cours de deuxième année : un site web pour une crèche. Les parents peuvent y inscrire leurs enfants, et les animateurs peuvent créer leur compte et renseigner leur disponibilité. Le projet est toujours en cours de développement.</p>
+        </div>
+        <div class="project-note">
+          <div class="tags">
+            <span class="tag accent">PHP</span><span class="tag accent">SQL</span><span class="tag accent">MVC</span><span class="tag">daisyUI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Contexte</h4>
+          <p>Le site doit simplifier la gestion d'une crèche : un parent crée son compte, déclare son enfant (avec un éventuel PAI) puis l'inscrit à partir d'une date de début. Un animateur crée son compte et indique ses disponibilités.</p>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Technologies & Outils</h4>
+          <ul class="project-list">
+            <li>PHP pour le back-end, structuré en MVC (modèles, vues, contrôleurs).</li>
+            <li>MySQL avec PDO et requêtes préparées.</li>
+            <li>daisyUI et Tailwind CSS pour l'interface.</li>
+            <li>Sessions PHP pour la connexion et la gestion des rôles.</li>
+            <li>XAMPP pour l'environnement de développement local.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Base de données</h4>
+          <p>Un utilisateur est spécialisé en parent ou en animateur (héritage), ce qui évite de mélanger les champs propres à chaque rôle. Chaque enfant est rattaché à un parent, et une inscription relie un parent à son enfant avec une date de début.</p>
+        </div>
+      </div>
+
+      <div class="project-detail-grid">
+        <div class="project-panel">
+          <h4 class="ent-card-title">Côté parent</h4>
+          <ul class="project-list">
+            <li>Inscription et connexion.</li>
+            <li>Déclaration d'un enfant : nom, prénom, date de naissance, PAI et son détail.</li>
+            <li>Inscription de l'enfant à la crèche avec une date de début.</li>
+            <li>Liste de ses inscriptions.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Côté animateur</h4>
+          <ul class="project-list">
+            <li>Création du compte avec son expérience et sa disponibilité.</li>
+            <li>Modification de sa disponibilité depuis son profil.</li>
+          </ul>
+        </div>
+        <div class="project-panel">
+          <h4 class="ent-card-title">Côté admin</h4>
+          <ul class="project-list">
+            <li>Liste de toutes les inscriptions : enfant, PAI, parent, téléphone et date de début.</li>
+            <li>Accès réservé : un parent ou un animateur ne peut pas ouvrir ces pages.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-panel">
+        <h4 class="ent-card-title">Conclusion & Apprentissages</h4>
+        <p>Ce projet m'a permis de concevoir une base de données avec héritage, de travailler en MVC avec une vraie séparation entre la logique (contrôleurs et modèles) et l'affichage (vues), et de gérer plusieurs rôles d'utilisateurs avec leurs propres accès.</p>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <a href="index.html#projets" class="btn-ghost"><i class="bi bi-arrow-left"></i> Retour aux projets</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span class="t-prompt">~/mad.dev $ </span>
+    <span style="color:var(--accent)">echo</span>
+    <span style="color:#fb923c;">"© 2026 DIALLO Mamadou — BTS SIO SLAM — CFA INSTA Paris"</span>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
